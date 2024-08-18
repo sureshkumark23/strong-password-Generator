@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white flex justify-center items-center h-screen">
+
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-sm">
+        <h1 class="text-2xl font-bold mb-4">Password Generator</h1>
+
+        <div class="mb-4">
+            <label for="length" class="block text-sm font-medium">Password Length</label>
+            <input type="number" id="length" class="mt-1 block w-full p-2 bg-gray-700 rounded" value="12" min="4" max="32">
+        </div>
+
+        <div class="mb-4">
+            <label class="flex items-center">
+                <input type="checkbox" id="uppercase" class="form-checkbox bg-gray-700 text-indigo-600 h-5 w-5">
+                <span class="ml-2">Include Uppercase Letters</span>
+            </label>
+        </div>
+
+        <div class="mb-4">
+            <label class="flex items-center">
+                <input type="checkbox" id="lowercase" class="form-checkbox bg-gray-700 text-indigo-600 h-5 w-5">
+                <span class="ml-2">Include Lowercase Letters</span>
+            </label>
+        </div>
+
+        <div class="mb-4">
+            <label class="flex items-center">
+                <input type="checkbox" id="numbers" class="form-checkbox bg-gray-700 text-indigo-600 h-5 w-5">
+                <span class="ml-2">Include Numbers</span>
+            </label>
+        </div>
+
+        <div class="mb-4">
+            <label class="flex items-center">
+                <input type="checkbox" id="symbols" class="form-checkbox bg-gray-700 text-indigo-600 h-5 w-5">
+                <span class="ml-2">Include Symbols</span>
+            </label>
+        </div>
+
+        <button id="generate" class="bg-indigo-600 text-white py-2 px-4 rounded w-full">Generate Password</button>
+
+        <div class="mt-4">
+            <input type="text" id="password" readonly class="w-full p-2 bg-gray-700 rounded">
+            <button id="copy" class="bg-green-600 text-white py-2 px-4 rounded mt-2 w-full">Copy to Clipboard</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
